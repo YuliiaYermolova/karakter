@@ -653,74 +653,78 @@
   </div>
 </section>
 
-<!-- TILBAKEMELDINGER -->
+<!-- BRUK & TILBAKEMELDINGER -->
 <section id="tilbakemeldinger" class="section">
   <div class="container">
-    <h2><span class="num">★</span> Tilbakemeldinger</h2>
+    <h2><span class="num">★</span> Ekte bruk &amp; tilbakemeldinger</h2>
     <p class="lede">
-      Stemmer fra klassen, lærere og brukere som har testet prosjektene mine.
-      <span class="muted small">(Sitater er omformulert med samtykke fra avsenderne.)</span>
+      Prosjektene mine er ikke bare innleveringer — de blir faktisk brukt av
+      ekte mennesker. Det er slik jeg jobber: bygge, dele, få tilbakemelding, forbedre.
     </p>
     <div class="testimonials">
-      <figure class="testimonial">
-        <blockquote>«Pine &amp; Brass føles som en ekte kafé jeg kunne tenke meg å besøke. Detaljene gjør hele forskjellen.»</blockquote>
-        <figcaption>— Medelev, VG1 IM</figcaption>
+      <figure class="testimonial use-card">
+        <blockquote>Venner har tatt i bruk <strong>Starry Planner</strong> i sin egen hverdag — pomodoro og ukeplan ble lagt til etter at de savnet det.</blockquote>
+        <figcaption>— reell bruk blant venner</figcaption>
       </figure>
-      <figure class="testimonial">
-        <blockquote>«Imponerende at hun bygger så mye på fritiden. Det viser ekte interesse for faget.»</blockquote>
-        <figcaption>— Lærer, Charlottenlund VGS</figcaption>
+      <figure class="testimonial use-card">
+        <blockquote>To-spiller-quizspillet mitt (egen nettside) har blitt spilt av venner — moro å se et eget produkt bli brukt sosialt.</blockquote>
+        <figcaption>— eget spillprosjekt</figcaption>
       </figure>
-      <figure class="testimonial">
-        <blockquote>«Starry Planner er det første jeg åpner om morgenen. Pomodoro + sitater = perfekt fokus.»</blockquote>
-        <figcaption>— Bruker, Starry Planner</figcaption>
+      <figure class="testimonial use-card">
+        <blockquote>Tilbakemeldinger fra klassen på nettsidene mine har ført til konkrete forbedringer: bedre kontrast og større touch-mål på mobil.</blockquote>
+        <figcaption>— iterasjon etter klassetest</figcaption>
       </figure>
     </div>
+    <p class="muted small" style="margin-top:1.2rem;">
+      Disse beskrivelsene er ærlige observasjoner av reell bruk — ikke oppdiktede sitater.
+    </p>
   </div>
 </section>
 
 <!-- KVALITET -->
 <section id="kvalitet" class="section dark">
   <div class="container">
-    <h2><span class="num">✓</span> Kvalitet &amp; testing</h2>
+    <h2><span class="num">✓</span> Kvalitet &amp; teknisk håndverk</h2>
     <p class="lede">
-      Karakter 6 betyr ikke bare «det funker» — det betyr at det er målbart godt.
-      Denne siden er testet med profesjonelle verktøy:
+      Karakter 6 betyr ikke bare «det funker» — det betyr at det er gjort ordentlig.
+      Her er konkrete tekniske valg jeg har tatt på denne siden. Alt kan etterprøves
+      i kildekoden eller med Lighthouse i DevTools.
     </p>
     <div class="quality-grid">
       <div class="quality-card">
-        <div class="q-score">95+</div>
-        <h3>Lighthouse · Performance</h3>
-        <p>Lazy-loading, content-visibility, optimaliserte bilder, paused canvas når faner er skjult.</p>
+        <div class="q-score">✓</div>
+        <h3>Ytelse</h3>
+        <p>Lazy-loading av bilder, <code>content-visibility</code>, optimaliserte bilder, og canvas-animasjonen pauses når fanen er skjult (sparer batteri).</p>
       </div>
       <div class="quality-card">
-        <div class="q-score">100</div>
-        <h3>Lighthouse · Accessibility</h3>
-        <p>Skip-link, ARIA, semantisk HTML, prefers-reduced-motion, full tastaturnavigasjon, WCAG AA-kontrast.</p>
+        <div class="q-score">✓</div>
+        <h3>Universell utforming</h3>
+        <p>Skip-link, ARIA-attributter, semantisk HTML, <code>prefers-reduced-motion</code> og full tastaturnavigasjon.</p>
       </div>
       <div class="quality-card">
-        <div class="q-score">100</div>
-        <h3>Lighthouse · Best Practices</h3>
-        <p>HTTPS-klar, ingen console-feil, moderne API-er, sikre lenker (rel=noopener).</p>
+        <div class="q-score">✓</div>
+        <h3>Beste praksis</h3>
+        <p>HTTPS (GitHub Pages), moderne JavaScript-API-er og sikre eksterne lenker med <code>rel="noopener"</code>.</p>
       </div>
       <div class="quality-card">
-        <div class="q-score">100</div>
-        <h3>Lighthouse · SEO</h3>
-        <p>Meta description, Open Graph, JSON-LD structured data, canonical lang, semantisk markup.</p>
+        <div class="q-score">✓</div>
+        <h3>SEO &amp; metadata</h3>
+        <p>Meta description, Open Graph, JSON-LD strukturert data, riktig <code>lang</code> og semantisk markup.</p>
       </div>
       <div class="quality-card">
         <div class="q-score">PWA</div>
         <h3>Progressive Web App</h3>
-        <p>Service worker + manifest. Fungerer offline. Kan «installeres» som app på iOS, Android, Mac.</p>
+        <p>Service worker + manifest. Kan «installeres» som app på iOS, Android og Mac.</p>
       </div>
       <div class="quality-card">
-        <div class="q-score">0</div>
-        <h3>Validering · W3C</h3>
-        <p>HTML &amp; CSS validert. Null feil. Semantisk korrekt markup.</p>
+        <div class="q-score">⌨︎</div>
+        <h3>Skrevet for hånd</h3>
+        <p>Ingen rammeverk, ingen bibliotek — ren HTML, CSS, JavaScript og Canvas. Hver linje er min egen.</p>
       </div>
     </div>
     <p class="muted small" style="margin-top:2rem;text-align:center;">
-      Test selv: kjør Lighthouse i DevTools, eller besøk
-      <a href="https://validator.w3.org" target="_blank" rel="noopener">validator.w3.org</a>.
+      Vil du sjekke selv? Kjør <strong>Lighthouse</strong> i Chrome DevTools, eller åpne
+      kildekoden på <a href="https://github.com/YuliiaYermolova/karakter" target="_blank" rel="noopener">GitHub</a>.
     </p>
   </div>
 </section>

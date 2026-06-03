@@ -1639,6 +1639,15 @@ h2:hover .anchor-link { opacity: 0.5; }
   color: var(--gold);
   opacity: 0.8;
 }
+/* Honest "real use" cards — no decorative quote mark, not fake quotes */
+.use-card::before { display: none; }
+.use-card blockquote {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+.use-card { border-left: 3px solid rgba(244,196,48,0.5); }
 
 /* =====================================================
    Quality / Lighthouse section
