@@ -106,7 +106,7 @@
         </div>
         <span class="sem-arrow">→</span>
         <div class="sem-item">
-          <span class="sem-label">Termin 2</span>
+          <span class="sem-label">Standpunkt</span>
           <div class="stamp-grade">
             <span class="stamp-num">6</span>
             <svg class="stamp-ring" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -552,14 +552,14 @@
       </a>
 
       <a class="project purrfect" href="#" data-modal="purrfect">
-        <div class="project-art purrfect-art"><img src="screens/purrfect.png" alt="PurrfectFocus" loading="lazy"></div>
+        <div class="project-art purrfect-art"><img src="assets/purrfect/02_hovedskjerm.jpg" alt="PurrfectFocus" loading="lazy"></div>
         <div class="project-body">
-          <h3>PurrfectFocus</h3>
-          <p>iOS-app: pomodoro møter katteoppdrett. Egne SVG-er for rasen, eget mini-spill «LastLight». Swift + SwiftUI.</p>
+          <h3>PurrfectFocus <span class="badge-hot">★ Hovedprosjekt</span></h3>
+          <p>Komplett iOS-app: pomodoro, vaner, statistikk og en egen butikk. Designet og kodet fra bunnen av i Swift + SwiftUI.</p>
           <ul class="tech">
             <li>Swift</li><li>SwiftUI</li><li>Xcode</li><li>iOS</li>
           </ul>
-          <span class="open">Detaljer →</span>
+          <span class="open">▶︎ Se video + skjermbilder →</span>
         </div>
       </a>
 
@@ -768,18 +768,53 @@
 
 <!-- Modal for PurrfectFocus -->
 <div class="modal" id="modal-purrfect" hidden>
-  <div class="modal-inner">
+  <div class="modal-inner modal-wide">
     <button class="modal-close" aria-label="Lukk">×</button>
-    <h3>PurrfectFocus — iOS</h3>
-    <p>En fokus-app der pomodoro-økter belønner deg med kattaraser.
-       Inneholder også et mini-tekstspill «LastLight» med flere endinger.</p>
-    <ul>
-      <li><strong>Språk:</strong> Swift</li>
-      <li><strong>UI:</strong> SwiftUI</li>
-      <li><strong>Egne SVG-er:</strong> Bengal, Maine Coon, Persian, Sphynx</li>
-      <li><strong>Verktøy:</strong> Xcode</li>
-    </ul>
-    <p class="muted">Kildekoden er i workspace under <code>project/PurrfectFocus/</code>. Kan vises live på Mac.</p>
+    <div class="modal-head">
+      <h3>PurrfectFocus — iOS-app i Swift</h3>
+      <p class="muted small">Bygget i Xcode med SwiftUI · Egen design · Kjører på ekte iPhone</p>
+    </div>
+
+    <p>En fokus- og vane-app der pomodoro-økter og daglige vaner belønner deg med
+       kattepleie, prestasjoner og en egen butikk. Designet, programmert og testet
+       fra bunnen av — onboarding, mørk/lys modus, statistikk og animasjoner.</p>
+
+    <!-- VIDEO DEMO -->
+    <div class="pf-video">
+      <video
+        controls
+        playsinline
+        preload="none"
+        poster="assets/purrfect/demo-poster.jpg"
+        width="1206" height="2622">
+        <source src="assets/purrfect/demo.mp4" type="video/mp4">
+        Nettleseren din støtter ikke video. <a href="assets/purrfect/demo.mp4">Last ned demoen</a>.
+      </video>
+      <p class="muted small" style="text-align:center;margin-top:0.6rem;">▶︎ Live demo (2 min) — tatt opp på min egen iPhone</p>
+    </div>
+
+    <!-- SCREENSHOT GALLERY -->
+    <h4 class="pf-subtitle">Skjermbilder fra appen</h4>
+    <div class="pf-gallery">
+      <figure><img src="assets/purrfect/01_splash.jpg" alt="Startskjerm" loading="lazy"><figcaption>Startskjerm</figcaption></figure>
+      <figure><img src="assets/purrfect/02_hovedskjerm.jpg" alt="Hovedskjerm (mørk modus)" loading="lazy"><figcaption>Hovedskjerm</figcaption></figure>
+      <figure><img src="assets/purrfect/03_pomodoro.jpg" alt="Pomodoro-fokustimer" loading="lazy"><figcaption>Pomodoro-timer</figcaption></figure>
+      <figure><img src="assets/purrfect/04_vaner.jpg" alt="Vanevalg" loading="lazy"><figcaption>Design din dag</figcaption></figure>
+      <figure><img src="assets/purrfect/05_statistikk.jpg" alt="Statistikk og ukediagram" loading="lazy"><figcaption>Statistikk</figcaption></figure>
+      <figure><img src="assets/purrfect/06_prestasjoner.jpg" alt="Prestasjoner" loading="lazy"><figcaption>Prestasjoner</figcaption></figure>
+      <figure><img src="assets/purrfect/07_butikk.jpg" alt="Butikk" loading="lazy"><figcaption>Butikk</figcaption></figure>
+      <figure><img src="assets/purrfect/08_feiring.jpg" alt="Feiring når alle vaner er fullført" loading="lazy"><figcaption>Feiring</figcaption></figure>
+    </div>
+
+    <div class="pf-tech">
+      <span><strong>Språk:</strong> Swift</span>
+      <span><strong>UI:</strong> SwiftUI</span>
+      <span><strong>Verktøy:</strong> Xcode</span>
+      <span><strong>Plattform:</strong> iOS (iPhone)</span>
+      <span><strong>Funksjoner:</strong> Onboarding · Pomodoro · Vaner · Statistikk · Prestasjoner · Butikk · Mørk/lys modus</span>
+    </div>
+    <p class="muted small">Dette er det mest avanserte prosjektet mitt — en komplett, fungerende iOS-app
+       med ekte appstruktur, ikke bare en skisse. Kan demonstreres live på iPhone.</p>
   </div>
 </div>
 
