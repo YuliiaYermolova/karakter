@@ -1,15 +1,13 @@
-/* Service Worker — basic offline cache for Karakter 6 */
-const CACHE = 'karakter6-v1';
+/* Service Worker — Karakter 6
+   Strategi: network-first for ferskt innhold, cache som offline-fallback.
+   Bump CACHE-versjonen ved hver endring for å tømme gammel cache. */
+const CACHE = 'karakter6-v3';
 const ASSETS = [
   './',
   './index.html',
   './style.css',
   './script.js',
-  './manifest.webmanifest',
-  './assets/barn.jpg',
-  './assets/grisha.jpg',
-  './assets/grisha-coder.jpg',
-  './assets/datamodell.jpeg'
+  './manifest.webmanifest'
 ];
 
 self.addEventListener('install', (e) => {
@@ -23,21 +21,25 @@ self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
-    )
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
+  const url = new URL(e.request.url);
+  if (url.origin !== location.origin) return; // la nettleseren håndtere eksterne (fonts osv.)
+
+  // Network-first: alltid prøv ferskt innhold, fall tilbake til cache offline
   e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request).then((res) => {
-      // Cache same-origin successful responses
-      if (res.ok && new URL(e.request.url).origin === location.origin) {
-        const clone = res.clone();
-        caches.open(CACHE).then((c) => c.put(e.request, clone));
-      }
-      return res;
-    }).catch(() => caches.match('./index.html')))
+    fetch(e.request)
+      .then((res) => {
+        if (res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE).then((c) => c.put(e.request, clone));
+        }
+        return res;
+      })
+      .catch(() => caches.match(e.request).then((hit) => hit || caches.match('./index.html')))
   );
 });
